@@ -1,3 +1,69 @@
+/*
+
+
+https://www.codechef.com/INEK2019/problems/IF06
+
+
+
+All submissions for this problem are available.NIT Trichy is a well-known institute, with lots of talented programmers, who are planning to make some teams amongst themselves and are searching for one more talented programmer. In search of a programmer, they provide you the opportunity by giving a following problem statement to solve.
+
+Initially, every programmer is alone on his/her own team. When a programmer of one team sends an invitation to a programmer of another team, their teams combine together into a single team. If they already belong to the same team, then nothing changes.
+
+These teams sometimes get too competitive. We say that two distinct terms T1 and T2 are competing if |size (T2) – size (T1)| >= c, where size (T) denotes the number of members in a team T and c denotes the competitive constant.
+
+The code should accept and process some queries. The query follows the syntax as shown below:
+
+1xy. Programmer x invites Programmer y to join their team.
+2c. Find the number of pairs of teams which are currently competing, using the competitive constant c.
+For example, given 3 programmers, and a query 121,
+
+Solve the above problem and build a code which takes in two integers n and q and prints the answer for each query of type 2 in a separate line. You need to take the queries from the standard input as described in the input format section.
+
+Input:
+Input starts with two space separated integers n, denoting the number of developers and q, denoting the number of queries.
+
+Then, q lines follow, each describing a query and are either:
+
+1xy
+2c
+
+
+Output:
+For every query of type 2, print the number of competing pairs in a single line.
+
+
+Constraints
+1≤n≤105
+1≤q≤2x105
+1≤x,y≤n
+0≤c≤109
+
+
+Sample Input:
+3 3
+1 2 1
+2 2
+2 1
+
+
+Sample Output:
+0
+1
+
+
+EXPLANATION:
+Initially, the three programmers are in their own teams: {1}, {2}, {3}
+
+After the first query, the teams are now: {1,2},{3}
+
+For the second query, there is no pair of groups having size differences greater than or equal to 2.
+
+For the third query, there is 1 pair of groups having size differences equal to 1.
+*/
+
+
+
+
 #include <iostream>
 #include <cmath>
 using namespace std;
