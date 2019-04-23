@@ -1,0 +1,62 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	int n,q;
+	cin>>n>>q;
+	int a[n]={0};
+	while(q--)
+	{
+	    int count=0;
+	    int qnum;
+	    int s;
+	    cin>>qnum;
+	    int tnum=1;
+	    if(qnum==1)
+	    {
+	        int temp1,temp2;
+	        cin>>temp1>>temp2;
+	        if(a[temp1]==0 && a[temp2]==0)
+	        {
+	            a[temp1]==tnum;
+	            a[temp2]==tnum;
+	            tnum++;
+	        }
+	        else if(a[temp1]>0)
+	            a[temp2]=a[temp1];
+	        else if(a[temp2]>0)
+	            a[temp1]=a[temp2];
+	        
+	    } 
+	    else if(qnum==2) 
+	    {   
+	        for(int i=0;i<n;i++)
+	        {
+	            if(a[i]==0)
+	            {
+	                a[i]=tnum;
+	                tnum++;
+	            }
+	        }
+    	    int c;
+    	    cin>>c;
+    	    int z[tnum]={0};
+    	    for(int i=0;i<n;i++)
+    	        z[a[i]]++;
+    	    if(tnum<2)
+    	    cout<<"1\n";
+    	    else{
+    	    for(int i=1;i<tnum-1;i++)
+    	        for(int j=i+1;j<tnum;j++)
+    	            if(abs(z[i]-z[j])>=c)
+    	                count++;
+    	   cout<<count<<"\n";
+    	    }
+	    }
+	}
+	return 0;
+}
